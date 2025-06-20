@@ -1,0 +1,26 @@
+[package]
+name = "so_survey_analyzer"
+version = "0.1.0"
+edition = "2021"
+authors = ["Your Name <your.email@example.com>"]
+description = "A library for analyzing Stack Overflow Survey data"
+license = "MIT"
+
+[dependencies]
+calamine = "0.25"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+clap = { version = "4.0", features = ["derive"] }
+thiserror = "1.0"
+anyhow = "1.0"
+
+[dev-dependencies]
+tempfile = "3.8"
+
+[[bin]]
+name = "so_survey_cli"
+path = "src/bin/cli.rs"
+
+[[example]]
+name = "basic_usage"
+path = "examples/basic_usage.rs"
